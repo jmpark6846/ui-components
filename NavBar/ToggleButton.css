@@ -2,6 +2,8 @@
   display:inline-block;
   margin-right: 15px;
   cursor: pointer;  
+  float: left;
+  padding: 0.3em 0;
 }
 
 @media only screen and (min-width: 992px) {
