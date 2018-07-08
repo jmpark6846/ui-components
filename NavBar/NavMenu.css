@@ -1,0 +1,7 @@
+.nav-menu{
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+}

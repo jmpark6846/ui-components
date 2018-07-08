@@ -1,0 +1,14 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "description": "현재 컴포넌트 목록\r - 그리드",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
+}
