@@ -3,13 +3,8 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './NavMenu.css'
 
-const NavMenu = ({pullRight, children}) => {
-  const classes = classNames(
-    'nav-menu', 
-    { 
-      'ml-auto': pullRight
-    }
-  )
+const NavMenu = ({toggle, pullRight, children}) => {
+  const classes = classNames('nav-menu', {'ml-auto': pullRight }, {'hide':toggle})
   return (
     <ul className={classes}>
       {children}

@@ -5,7 +5,7 @@ import { Container } from "../grid";
 import './NavBar.css'
 
 const NavBar = ({className, children}) => {
-  const classes = classNames('navbar', { [className] : className })
+  const classes = classNames('navbar', className)
   return (
     <div className={classes}>  
       {children}

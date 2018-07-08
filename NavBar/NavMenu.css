@@ -3,6 +3,16 @@
   margin-left: 15px;
   width:100%;
   padding:0px;
+  flex-direction: column;
+  -webkit-transition: display 1s;
+  transition: display 1s;
+}
+.nav-menu.hiding{
+  height:0;
+}
+
+.nav-menu.hide{
+  display: none;
 }
 
 /* 노트북 or 데스크탑 */
@@ -14,5 +24,6 @@
     margin-left: 15px;
     padding: 0;
     width:inherit;
+    flex-direction: row;
   }  
 }
