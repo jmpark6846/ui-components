@@ -5,12 +5,7 @@ import { Container } from "../grid";
 import './NavBar.css'
 
 const NavBar = ({className, children}) => {
-  const classes = classNames(
-    'navbar',
-    {
-      [className] : className
-    }
-  )
+  const classes = classNames('navbar', { [className] : className })
   return (
     <div className={classes}>  
       {children}
@@ -19,7 +14,7 @@ const NavBar = ({className, children}) => {
 }
 
 NavBar.propTypes = {
-  fluid: PropTypes.bool,
+  fluid: PropTypes. bool,
   children: PropTypes.node,
 }
 
