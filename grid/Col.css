@@ -1,7 +1,7 @@
 /* 모든 칼럼 기본 설정 */
 [class*="col-"] {
   float: left;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 /* 디바이스별 칼럼 너비 설정 */
