@@ -4,15 +4,13 @@
   width:100%;
   padding:0px;
   flex-direction: column;
-  -webkit-transition: display 1s;
-  transition: display 1s;
 }
 .nav-menu.hiding{
-  height:0;
+  height:0px;
 }
 
 .nav-menu.hide{
-  display: none;
+  display:none;
 }
 
 /* 노트북 or 데스크탑 */

@@ -5,7 +5,7 @@ import './ToggleButton.css'
 
 const ToggleButton = ({onClick}) => {
   return (
-    <Icon className='toggle-button ml-auto' icon='toggle' onClick={onClick}/>
+    <Icon className='toggle-button ml-auto' icon='fas fa-bars' onClick={onClick}/>
   ) 
 }
 
