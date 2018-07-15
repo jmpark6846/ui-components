@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './NumberSelector.css'
 
 class NumberSelector extends React.Component{
@@ -36,6 +37,9 @@ class NumberSelector extends React.Component{
   }
 }
 
+NumberSelector.propTypes = {
+  number: PropTypes.number
+}
 
 
 export default NumberSelector
