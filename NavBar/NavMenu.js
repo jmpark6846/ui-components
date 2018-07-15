@@ -16,8 +16,8 @@ class NavMenu extends React.Component {
   
   }
   render(){
-    const {pullRight, children} = this.props
-    const classes = classNames('nav-menu', {'ml-auto': pullRight }, {'hide': !this.state.open})
+    const {pullRight, children, className} = this.props
+    const classes = classNames('nav-menu', className, {'ml-auto': pullRight }, {'hide': !this.state.open})
     return (
       <React.Fragment>
         <ToggleButton onClick={this.handleToggle}/>

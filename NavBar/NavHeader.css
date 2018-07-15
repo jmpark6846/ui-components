@@ -1,4 +1,12 @@
 .nav-header{
   color:palevioletred;
   font-size:1.25rem;
+  display: inline-block;
+  padding: 1rem 0rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-header{
+    padding: 1rem 1.3rem;
+  }
 }

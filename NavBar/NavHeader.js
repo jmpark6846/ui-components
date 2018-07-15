@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import { navHeader } from './NavHeader.css'
+import { NavLink } from "react-router-dom";
+
 import './NavHeader.css'
 
 const NavHeader = ({children}) => {
   return (
-    <a href='/' className='nav-header'>
+    <NavLink to={`/`} className='nav-header'>
       {children}
-    </a>
+    </NavLink>
   )
 }
 

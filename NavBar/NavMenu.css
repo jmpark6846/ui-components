@@ -1,9 +1,9 @@
 .nav-menu{
   list-style: none;
-  margin-left: 15px;
   width:100%;
   padding:0px;
   flex-direction: column;
+  margin:0;
 }
 .nav-menu.hiding{
   height:0px;

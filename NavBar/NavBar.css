@@ -1,5 +1,5 @@
 .navbar{
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
 }
 
 
@@ -7,7 +7,6 @@
 @media only screen and (min-width: 992px) {
   .navbar{
     display: flex;
-    padding: 0.5rem 1rem;
     align-items: center;
     flex-flow: row nowrap;
   }  

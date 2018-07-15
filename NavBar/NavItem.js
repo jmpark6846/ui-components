@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { NavLink } from "react-router-dom";
 import './NavItem.css'
 
 const NavItem = ({to, children}) => {
   return (
-    <li className='nav-item'><a href={to} className='nav-link'>{children}</a></li>
+    <li className='nav-item'><NavLink to={to} className='nav-link'>{children}</NavLink></li>
   )
 }
 

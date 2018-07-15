@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { Container } from "../grid";
 import './NavBar.css'
 
-const NavBar = ({className, children}) => {
+const NavBar = ({className, children, fluid}) => {
   const classes = classNames('navbar', className)
   return (
     <div className={classes}>  
