@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './Button.css';
-import Icon from '../ui-components/Icon/Icon';
+import Icon from '../Icon/Icon';
 
 const Button = ({className, primary, onClick, icon, value}) => {
   return (
