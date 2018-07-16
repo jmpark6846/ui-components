@@ -8,6 +8,7 @@
 }
 
 .rating .icon{
-  color: #636363;
+  /* color: #636363; */
+  color: gold;
   font-size: 1.1rem;
 }

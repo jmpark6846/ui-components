@@ -6,28 +6,52 @@ import './Rating.css'
 
 const maxRating = 5
 class Rating extends React.Component{
+  constructor(props){
+    super(props)
 
-  render(){
-    const { value, className, reviewCount } = this.props
+    this.state= {
+      hover:false,
+      hoverValue: 0,
+    }
+  }
+
+  handleMouseOver = (e) => {
+    const value = e.target.dataset.value
+    this.setState({ hover: true, hoverValue : value })
+  }
+
+  handleMouseOut = (e) => {
+    this.setState({ hover: false, hoverValue : 0 })
+  }
+
+  handleClick = (e) => {
+    const value = e.target.dataset.value
+    console.log(value)
+  }
+
+  makeValueArray = (value) => {
     const star = parseInt(value)
     const half = value*10%10 !== 0 ? 1 : 0
     const arr = Array(maxRating).fill('star', 0, star).fill('half', star, star+half).fill('blank', star+half, maxRating)
 
+    return arr
+  }
+
+  render(){
+    const { value, className, input } = this.props
+    const { hover, hoverValue } = this.state
+    const rateArr = this.makeValueArray( input && hover ? hoverValue : value)
+
     return (
       <div className={classNames('rating', className)}>
-        {arr.map((s,i)=>{
+        {rateArr.map((s,i)=>{
           if(s === 'star')
-            return <Icon key={i} icon='fas fa-star' />
+            return <Icon className='solid-star' onClick={this.handleClick} onMouseOut={this.handleMouseOut} onMouseOver={this.handleMouseOver} data-value={i+1} key={i} icon='fas fa-star' />
           else if(s === 'half')
-            return <Icon key={i} icon='fas fa-star-half-alt' />
+            return <Icon className='half-star' onClick={this.handleClick} onMouseOut={this.handleMouseOut} onMouseOver={this.handleMouseOver} data-value={i+1} key={i} icon='fas fa-star-half-alt' />
           else 
-            return <Icon key={i} icon='far fa-star' />
+            return <Icon className='empty-star' onClick={this.handleClick} onMouseOut={this.handleMouseOut} onMouseOver={this.handleMouseOver} data-value={i+1} key={i} icon='far fa-star' />
         })}
-        { reviewCount &&
-          <span className='review-count'>
-            구매평 {reviewCount}
-          </span>
-        }
       </div>
     )
   } 
@@ -35,8 +59,8 @@ class Rating extends React.Component{
 
 Rating.propTypes = {
   value: PropTypes.number,
-  reviewCount: PropTypes.number,
   className: PropTypes.string,
+  input: PropTypes.bool
 }
 
 export default Rating
