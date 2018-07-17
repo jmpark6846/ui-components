@@ -12,11 +12,12 @@ class Rating extends React.Component{
     this.state= {
       hover:false,
       hoverValue: 0,
+      value: props.value,
     }
   }
 
   handleMouseOver = (e) => {
-    const value = e.target.dataset.value
+    const value = parseInt(e.target.dataset.value)
     this.setState({ hover: true, hoverValue : value })
   }
 
@@ -25,8 +26,14 @@ class Rating extends React.Component{
   }
 
   handleClick = (e) => {
-    const value = e.target.dataset.value
-    console.log(value)
+    const value = parseInt(e.target.dataset.value)
+    const evt = { target : e.target, value }
+
+    if( this.props.input )
+      this.setState({ value })
+
+    if( this.props.onClick )
+      this.props.onClick(evt)
   }
 
   makeValueArray = (value) => {
@@ -38,8 +45,8 @@ class Rating extends React.Component{
   }
 
   render(){
-    const { value, className, input } = this.props
-    const { hover, hoverValue } = this.state
+    const { className, input } = this.props
+    const { value, hover, hoverValue } = this.state
     const rateArr = this.makeValueArray( input && hover ? hoverValue : value)
 
     return (
@@ -60,7 +67,8 @@ class Rating extends React.Component{
 Rating.propTypes = {
   value: PropTypes.number,
   className: PropTypes.string,
-  input: PropTypes.bool
+  input: PropTypes.bool,
+  onClick: PropTypes.func,
 }
 
 export default Rating
