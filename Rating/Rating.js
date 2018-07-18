@@ -28,9 +28,6 @@ class Rating extends React.Component{
     const value = parseInt(e.target.dataset.value)
     const evt = { target : e.target, value }
 
-    if( this.props.input )
-      this.setState({ value })
-
     if( this.props.onClick )
       this.props.onClick(evt)
   }
