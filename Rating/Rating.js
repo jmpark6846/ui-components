@@ -12,7 +12,6 @@ class Rating extends React.Component{
     this.state= {
       hover:false,
       hoverValue: 0,
-      value: props.value,
     }
   }
 
@@ -45,10 +44,9 @@ class Rating extends React.Component{
   }
 
   render(){
-    const { className, input } = this.props
-    const { value, hover, hoverValue } = this.state
+    const { className, input, value } = this.props
+    const { hover, hoverValue } = this.state
     const rateArr = this.makeValueArray( input && hover ? hoverValue : value)
-
     return (
       <div className={classNames('rating', className)}>
         {rateArr.map((s,i)=>{
