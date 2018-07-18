@@ -5,11 +5,11 @@
   border:0;
 }
 
-.input-control .error{
+.form .label.error{
   color: rgb(218, 95, 136);
 }
 
-.input-control .label{
+.form .label{
   margin-bottom: 10px;
   font-weight: 600;
   color:darkgray;

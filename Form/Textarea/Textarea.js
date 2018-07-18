@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import Label from '../Label/Label';
 import '../Form.css'
 
-const Textarea = ({className, label, error, children, ...rest}) => {
+const Textarea = ({className, label, error, value, ...rest}) => {
   return (
     <div className='input-control'>
       { label && <Label value={label} /> }
-      <textarea {...rest} className={classNames('textarea', className)}>{children}</textarea>
+      <textarea {...rest} className={classNames('textarea', className)} value={value}></textarea>
       { error && <Label value={error} error />}
     </div>
   )
