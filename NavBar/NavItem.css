@@ -1,5 +1,6 @@
 .nav-item{
   padding: 1rem 1.3rem;
+  align-self: center;
 }
 .nav-link{
   color:initial;

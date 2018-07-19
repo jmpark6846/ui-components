@@ -5,7 +5,13 @@ import './NavItem.css'
 
 const NavItem = ({to, children}) => {
   return (
-    <li className='nav-item'><NavLink to={to} className='nav-link'>{children}</NavLink></li>
+    <li className='nav-item'>
+      { 
+        to ? 
+        <NavLink to={to} className='nav-link'>{children}</NavLink>
+        : children
+      }
+    </li>
   )
 }
 
