@@ -38,7 +38,8 @@ class NumberSelector extends React.Component{
 }
 
 NumberSelector.propTypes = {
-  number: PropTypes.number
+  number: PropTypes.number,
+  onChange: PropTypes.func
 }
 
 
