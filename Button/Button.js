@@ -4,9 +4,9 @@ import classNames from 'classnames'
 import './Button.css';
 import Icon from '../Icon/Icon';
 
-const Button = ({className, primary, onClick, icon, value}) => {
+const Button = ({className, primary, onClick, icon, value, ...rest}) => {
   return (
-    <button className={classNames('button', className, { primary })} onClick={onClick}>
+    <button className={classNames('button', className, { primary })} onClick={onClick} {...rest}>
       { icon ? 
         <Icon icon={icon} />
         :
