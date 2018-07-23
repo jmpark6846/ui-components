@@ -1,6 +1,7 @@
 /* 모든 칼럼 기본 설정 */
 [class*="col-"] {
   float: left;
+  min-height: 1px;
   /* padding: 15px; */
 }
 
